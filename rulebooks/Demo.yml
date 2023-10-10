@@ -10,4 +10,4 @@
     - name: check for payload
       condition: event.payload
       action:
-        debug:
+        debug: "{{ event.payload }}"
