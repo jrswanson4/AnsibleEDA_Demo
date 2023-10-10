@@ -12,4 +12,4 @@
     - name: check for payload
       condition: event.payload is defined
       action:
-        debug: "{{ event.meta.headers.X_GitHub_Event }}"
+        debug: "{{ event.payload.meta.headers.X_GitHub_Event }}"
