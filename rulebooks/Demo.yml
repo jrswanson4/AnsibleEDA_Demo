@@ -8,6 +8,6 @@
 
   rules:
     - name: check for payload
-      condition: event.payload
+      condition: event.payload is defined
       action:
         debug: "{{ event.payload }}"
