@@ -15,6 +15,6 @@
         debug: 
 
     - name: check for ref_type
-      condition: event.payload[0].ref_type is defined
+      condition: event.meta.headers.X_GitHub_Event == "create"
       action: 
-        debug: "{{ event.payload[0].ref_type}}"
+        debug: "{{ event.payload.ref_type }}"
