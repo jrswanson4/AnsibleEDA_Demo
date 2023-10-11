@@ -15,6 +15,6 @@
         debug: 
 
     - name: check for ref_type
-      condition: event.payload.ref_type is defined
+      condition: event.payload[0].ref_type is defined
       action: 
-        debug: "{{ event.payload.ref_type }}"
+        debug: "{{ event.payload[0].ref_type}}"
