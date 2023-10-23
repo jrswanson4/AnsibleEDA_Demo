@@ -9,10 +9,10 @@
         - ansible.eda.dashes_to_underscores:
 
   rules:
-    - name: check for payload
-      condition: event.payload is defined 
-      action:
-        debug: 
+    #- name: check for payload
+    #  condition: event.payload is defined 
+    #  action:
+    #    debug: 
 
     - name: check for ref_type
       condition: event.meta.headers.X_GitHub_Event == "create"
@@ -22,4 +22,4 @@
     - name: check for forking
       condition: event.meta.headers.X_GitHub_Event == "fork"
       action:
-        debug: "{{ event.payload.forkee.owner.login[0] }}"
+        debug: 
