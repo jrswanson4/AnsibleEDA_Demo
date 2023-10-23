@@ -18,3 +18,8 @@
       condition: event.meta.headers.X_GitHub_Event == "create"
       action: 
         debug: 
+    
+    - name: check for ref_type
+      condition: event.meta.headers.X_GitHub_Event == "fork"
+      action:
+        debug: "{{ event.payload.forkee.full_name }}""
