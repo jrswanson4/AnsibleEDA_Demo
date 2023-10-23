@@ -24,5 +24,12 @@
       action:
         print_event:
           pretty: true
+
+    - name: check for forking
+      condition: event.meta.headers.X_GitHub_Event == "fork"
+      action:
+        set_fact:
+          fact: 
+            payload: "{{ event.payload }}"
           
         
