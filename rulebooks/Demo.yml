@@ -19,7 +19,7 @@
       action: 
         debug: 
     
-    - name: check for ref_type
+    - name: check for fork
       condition: event.meta.headers.X_GitHub_Event == "fork"
       action:
         debug: "{{ event.payload.forkee.full_name }}"
