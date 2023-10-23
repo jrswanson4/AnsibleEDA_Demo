@@ -31,5 +31,10 @@
         set_fact:
           fact: 
             payload: "{{ event.payload }}"
+
+    - name: get name
+      condition: event.payload.sender.login == "InedibleKirby"
+      action:
+        debug:
           
         
