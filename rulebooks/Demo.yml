@@ -25,7 +25,7 @@
         print_event:
           pretty: true
 
-    - name: check for forking
+    - name: set fact from fork
       condition: event.meta.headers.X_GitHub_Event == "fork"
       action:
         set_fact:
